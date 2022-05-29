@@ -1,133 +1,789 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/brands.min.css">
-<style>
-  body,
-  html {
-    height: 100%;
-    margin: 0;
-  }
+<html lang="en">
 
-  .bgimg {
-    background-image: url('./images/food-presentation-bg.jpg');
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    color: white;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 25px;
-  }
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  .topleft {
-    /* background-image: url('./images/logo.png'); */
-    position: absolute;
-    top: 0;
-    left: 16px;
-  }
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
 
-  .bottomleft {
-    position: absolute;
-    bottom: 0;
-    left: 16px;
-    padding-bottom: 10px;
-  }
+  <!-- Site Metas -->
+  <title>Bell Pepper</title>
+  <meta name="keywords" content="pickle, food, chutney, malabar tamarind, chips, banana, homemade, traditionaly made, coconut oil, kerala" />
+  <meta name="description" content="Pepper Bean, is a homegrown brand from Bell pepper which produces homemade food products, completely using organic ingredients, prepared by homemakers from the households of Kayamkulam, a village by the backwaters of Kerala." />
 
-  .bottom-right {
-    position: absolute;
-    bottom: 0;
-    right: 16px;
-    padding-bottom: 10px;
-    font-size: 18px;
-  }
+  <!-- Site Icons -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/icon.png" />
 
-  .middle {
-    /* background-image: url('./images/logo.png'); */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="css/responsive.css" />
+  <!-- color -->
+  <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
 
-  .logo {
-    width: 15%;
-    min-width: 150px;
-    height: auto;
-  }
+  <!-- Modernizer -->
+  <script src="js/modernizer.js"></script>
 
-  hr {
-    margin: auto;
-    width: 40%;
-  }
-
-  .brand-link,
-  .brand-link:hover {
-    color: #fff;
-    text-decoration: unset;
-  }
-
-  .fab {
-    font-style: normal;
-  }
-
-  .instagram:before {
-    content: "\f16d"
-  }
-
-  .fa-facebook:before {
-    content: "\f09a"
-  }
-
-  .fa-facebook-f:before {
-    content: "\f39e"
-  }
-
-  .fa-facebook-messenger:before {
-    content: "\f39f"
-  }
-
-  .fa-facebook-square:before {
-    content: "\f082"
-  }
-
-  .fa-whatsapp:before {
-    content: "\f232"
-  }
-
-  .fa-whatsapp-square:before {
-    content: "\f40c"
-  }
-</style>
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
 
 <body>
+  <div id="loader">
+    <div id="status"></div>
+  </div>
+  <div id="site-header">
+    <header id="header" class="header-block-top">
+      <div class="container">
+        <div class="row">
+          <div class="main-menu">
+            <!-- navbar -->
+            <nav class="navbar navbar-default" id="mainNav">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <div class="logo">
+                  <a class="navbar-brand js-scroll-trigger logo-header" href="#">
+                    <img src="images/logo.png" alt="" />
+                    <!-- Bell Pepper -->
+                  </a>
+                </div>
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#banner">Home</a></li>
+                  <li><a href="#about">About us</a></li>
+                  <li><a href="#menu">Products</a></li>
+                  <!-- <li><a href="#our_team">Team</a></li> -->
+                  <li><a href="#gallery">Gallery</a></li>
+                  <!-- <li><a href="#blog">Blog</a></li> -->
+                  <!-- <li><a href="#pricing">pricing</a></li> -->
+                  <!-- <li><a href="#reservation">Reservaion</a></li> -->
+                  <li><a href="#footer">Contact us</a></li>
+                </ul>
+              </div>
+              <!-- end nav-collapse -->
+            </nav>
+            <!-- end navbar -->
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container-fluid -->
+    </header>
+    <!-- end header -->
+  </div>
+  <!-- end site-header -->
 
-  <div class="bgimg">
-    <div class="topleft">
-      <p>Bell Pepper</p>
+  <div id="banner" class="banner full-screen-mode parallax">
+    <div class="container pr">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="banner-static">
+          <div class="banner-text">
+            <div class="banner-cell">
+              <h1>
+                Try our
+                <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="Tuna:Garlic:Mango:Lemon"
+                  data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span>
+                pickle.
+              </h1>
+              <h2>A taste of home</h2>
+              <p>
+                Made with Love
+                <span style="color: #e75b1e">&#8226;&#8226;&#8226;</span> 100%
+                Satisfaction Guarantee
+                <span style="color: #e75b1e">&#8226;&#8226;&#8226;</span> Best
+                Price
+              </p>
+              <div class="book-btn">
+                <a href="https://showroom.dotpe.in/bellpepperstore" class="table-btn hvr-underline-from-center">Order
+                  Online</a>
+              </div>
+              <a href="#about">
+                <div class="mouse"></div>
+              </a>
+            </div>
+            <!-- end banner-cell -->
+          </div>
+          <!-- end banner-text -->
+        </div>
+        <!-- end banner-static -->
+      </div>
+      <!-- end col -->
     </div>
-    <div class="middle">
-      <img src="images/logo.png" alt="bell pepper" class="logo" />
-      <h1 style="margin-top:0">We are coming soon</h1>
-      <hr>
-      <p>Stay tuned</p>
+    <!-- end container -->
+  </div>
+  <!-- end banner -->
+
+  <div id="about" class="hidden1 about-main pad-top-100 pad-bottom-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+            <h2 class="block-title">About Us</h2>
+            <h3>Eat Healthy Live Healthy!</h3>
+            <p>
+              <b>Pepper Bean</b>, is a homegrown brand from <b>Bell Pepper</b> which produces homemade food
+              products, completely using organic ingredients, prepared by
+              homemakers from the households of Kayamkulam, a village by the
+              backwaters of Kerala.
+            </p>
+
+            <p>
+              The initiative of making a product, enriched with 100% homemade
+              ingredients, prepared using traditional cooking methods of
+              Kerala, was initiated by Sumeesh S, the founder. The idea was to
+              make his mother’s wide assortment of tasty authentic recipes,
+              available to everyone who loves savoring good food.
+            </p>
+
+            <p>
+              Sumeesh begins with pickles of Oyster, fished from the
+              backwaters of Kayamkulam, a coast well known for ancient
+              maritime trade. Oysters and fishes, fresh with a mild scent and
+              moist flesh reaches his mother’s kitchen, along with ingredients
+              from his home garden. With of a firm desire to share good food,
+              <b>Pepper Bean</b> is now a homegrown brand, serving a range of
+              wholesome packed foods, including a variety of pickles and
+              homemade snacks. The products include both vegan and non-vegan
+              foods.
+            </p>
+
+            <p>
+              The brand now serves consumers in all corners of the country,
+              including the islands of Lakshadweep.
+            </p>
+
+            <p>
+              ‘Bell Pepper’ is adding more native dishes to its food library
+              day to day with a desire to serve its authentic taste.
+            </p>
+          </div>
+        </div>
+        <!-- end col -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+            <div class="about-images">
+              <img class="about-main" src="images/about-main.jpg" alt="About Main Image" />
+              <img class="about-inset" src="images/about-inset.jpg" alt="About Inset Image" />
+            </div>
+          </div>
+        </div>
+        <!-- end col -->
+      </div>
+      <!-- end row -->
     </div>
-    <div class="bottomleft">
-      <a href="https://instagram.com/bellpepper.store" target="_blank" class="brand-link"><i
-          class="fab instagram"></i></a>
-      <a href="http://facebook.com/bellpepper.store" target="_blank" class="brand-link"><i
-          class="fab fa-facebook"></i></a>
-      <a href="http://wa.me/918590841144" target="_blank" class="brand-link"><i class="fab fa-whatsapp"></i></a>
-    </div>
-    <div class="bottom-right">
-      <span class="copyright">&copy;</span> <span id="copy-year">2017</span> BellPepper
-    </div>
+    <!-- end container -->
   </div>
 
-  <script type="text/javascript">
-    document.getElementById("copy-year").innerHTML = new Date().getFullYear();
-  </script>
+  <div id="menu" class="menu-main pad-top-100 pad-bottom-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+            <h2 class="block-title text-center">Our Products</h2>
+            <p class="title-caption text-center">
+              Traditionaly homemade fresh products prepared under hygienic conditions. 100% natural, healthy & rich with no preservatives and no artificial colours added.
+            </p>
+          </div>
+          <div class="tab-menu">
+            <div class="slider slider-nav">
+              <div class="tab-title-menu">
+                <h2>PICKLES & CHUTNEYS</h2>
+                <p><i class="flaticon-canape"></i></p>
+              </div>
+              <div class="tab-title-menu">
+                <h2>OTHERS</h2>
+                <p><i class="flaticon-dinner"></i></p>
+              </div>
+              <!-- <div class="tab-title-menu">
+                  <h2>SPICES</h2>
+                  <p><i class="flaticon-dinner"></i></p>
+                </div>
+                <div class="tab-title-menu">
+                  <h2>SNACKS</h2>
+                  <p><i class="flaticon-dinner"></i></p>
+                </div>
+                <div class="tab-title-menu">
+                  <h2>OTHERS</h2>
+                  <p><i class="flaticon-dinner"></i></p>
+                </div> -->
+            </div>
+            <div class="slider slider-single">
+              <div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <a href="https://www.amazon.in/dp/B0B1HWYGTF" target="_blank">
+                      <div class="offer-item">
+                        <img src="images/products/prawns-chutney.jpg" alt="" class="img-responsive" />
+                        <div>
+                          <h3>PRAWNS CHUTNEY</h3>
+                          <p>
+                            Made from fresh coconut, premium quality dried & cooked prawns and spices. 100% natural.No preservatives, additives & colours added.
+                          </p>
+                        </div>
+                        <span class="offer-price">
+                          <s>₹350</s>
+                          <b>₹350</b>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- end col -->
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <a href="https://www.amazon.in/dp/B0B1DZG4ZJ" target="_blank">
+                      <div class="offer-item">
+                        <img src="images/products/tuna.jpg" alt="" class="img-responsive" />
+                        <div>
+                          <h3>TUNA PICKLE</h3>
+                          <p>
+                            Tasty homemade Tuna fish pickle. Prepared with fresh premium Tuna fish procured directly from Kerala harbour and an authentic blend of fresh spices.
+                          </p>
+                        </div>
+                        <span class="offer-price">
+                          <s>₹350</s>
+                          <b>₹350</b>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- end col -->
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <a href="https://www.amazon.in/dp/B09MS95XTR" target="_blank">
+                      <div class="offer-item">
+                        <img src="images/products/garlic.jpg" alt="" class="img-responsive" />
+                        <div>
+                          <h3>GARLIC PICKLE</h3>
+                          <p>
+                            Made from hygienically processed best quality Garlic.
+                          </p>
+                        </div>
+                        <span class="offer-price">
+                          <s>₹350</s>
+                          <b>₹350</b>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- end col -->
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <a href="https://www.amazon.in/dp/B09MS9J4KZ" target="_blank">
+                      <div class="offer-item">
+                        <img src="images/products/mango.jpeg" alt="" class="img-responsive" />
+                        <div>
+                          <h3>MANGO PICKLE</h3>
+                          <p>
+                            Prepared under hygienic conditions from best quality Mango. No artificial colors and flavours.
+                          </p>
+                        </div>
+                        <span class="offer-price">
+                          <s>₹350</s>
+                          <b>₹350</b>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- end col -->
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <a href="https://www.amazon.in/dp/B09MQG9SH3" target="_blank">
+                      <div class="offer-item">
+                        <img src="images/products/lemon.jpg" alt="" class="img-responsive" />
+                        <div>
+                          <h3>LEMON PICKLE</h3>
+                          <p>
+                            Made from best quality lemon with the roasted and grounded masala mix.
+                          </p>
+                        </div>
+                        <span class="offer-price">
+                          <s>₹350</s>
+                          <b>₹350</b>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- end col -->
+                </div>
+              </div>
+              <div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <a href="https://www.amazon.in/dp/B0B1DMDRZP" target="_blank">
+                      <div class="offer-item">
+                        <img src="images/products/coconut-oil.jpg" alt="" class="img-responsive" />
+                        <div>
+                          <h3>COCONUT OIL</h3>
+                          <p>
+                            Traditionaly made pure coconut oil from fresh roasted coconut. This oil have a beutiful natural aroma and antioxidants.
+                          </p>
+                        </div>
+                        <span class="offer-price">
+                          <s>₹350</s>
+                          <b>₹350</b>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- end col -->
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <a href="https://www.amazon.in/dp/B0B1N9BM5X" target="_blank">
+                      <div class="offer-item">
+                        <img src="images/products/malabar-tamarind.jpg" alt="" class="img-responsive" />
+                        <div>
+                          <h3>MALABAR TAMARIND</h3>
+                          <p>
+                            Organically grown in Mannar. 100 % pure and natural. No additives or preservatives added
+                            Collected directly from farmers.
+                          </p>
+                        </div>
+                        <span class="offer-price">
+                          <s>₹350</s>
+                          <b>₹350</b>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- end col -->
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <a href="https://www.amazon.in/dp/B0B1F5YV2Z" target="_blank">
+                      <div class="offer-item">
+                        <img src="images/products/banana-chips.jpg" alt="" class="img-responsive" />
+                        <div>
+                          <h3>BANANA CHIPS</h3>
+                          <p>
+                            Freshly home made crispy banana chips. 100% natural, healthy & rich with no preservatives and no artificial colours added.
+                          </p>
+                        </div>
+                        <span class="offer-price">
+                          <s>₹350</s>
+                          <b>₹350</b>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- end col -->
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <a href="https://www.amazon.in/dp/B09T8WJ63S" target="_blank">
+                      <div class="offer-item">
+                        <img src="images/products/dry-prawns.jpg" alt="" class="img-responsive" />
+                        <div>
+                          <h3>DRY PRAWNS</h3>
+                          <p>
+                            Wild caught Prawns  that have been hygienically sun dried. Salt less, natural, no artificial chemicals added.
+                          </p>
+                        </div>
+                        <span class="offer-price">
+                          <s>₹350</s>
+                          <b>₹350</b>
+                        </span>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- end col -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end tab-menu -->
+        </div>
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end menu -->
 
+  <div id="gallery" class="gallery-main pad-top-100 pad-bottom-100">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+            <h2 class="block-title text-center">Our Gallery</h2>
+            <!-- <p class="title-caption text-center">
+                There are many variations of passages of Lorem Ipsum available
+              </p> -->
+          </div>
+          <div class="gal-container clearfix">
+            <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+              <div class="box">
+                <a href="#" data-toggle="modal" data-target="#1">
+                  <img src="images/gallery_01.jpg" alt="" />
+                </a>
+                <div class="modal fade" id="1" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <div class="modal-body">
+                        <img src="images/gallery_01.jpg" alt="" />
+                      </div>
+                      <!-- <div class="col-md-12 description">
+                        <h4>This is the 1 one on my Gallery</h4>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+              <div class="box">
+                <a href="#" data-toggle="modal" data-target="#2">
+                  <img src="images/gallery_02.jpg" alt="" />
+                </a>
+                <div class="modal fade" id="2" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <div class="modal-body">
+                        <img src="images/gallery_02.jpg" alt="" />
+                      </div>
+                      <!-- <div class="col-md-12 description">
+                        <h4>This is the 2 one on my Gallery</h4>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+              <div class="box">
+                <a href="#" data-toggle="modal" data-target="#3">
+                  <img src="images/gallery_03.jpg" alt="" />
+                </a>
+                <div class="modal fade" id="3" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <div class="modal-body">
+                        <img src="images/gallery_03.jpg" alt="" />
+                      </div>
+                      <!-- <div class="col-md-12 description">
+                        <h4>This is the 3 one on my Gallery</h4>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+              <div class="box">
+                <a href="#" data-toggle="modal" data-target="#4">
+                  <img src="images/gallery_04.jpg" alt="" />
+                </a>
+                <div class="modal fade" id="4" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <div class="modal-body">
+                        <img src="images/gallery_04.jpg" alt="" />
+                      </div>
+                      <!-- <div class="col-md-12 description">
+                        <h4>This is the 4 one on my Gallery</h4>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+              <div class="box">
+                <a href="#" data-toggle="modal" data-target="#5">
+                  <img src="images/gallery_05.jpg" alt="" />
+                </a>
+                <div class="modal fade" id="5" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <div class="modal-body">
+                        <img src="images/gallery_05.jpg" alt="" />
+                      </div>
+                      <!-- <div class="col-md-12 description">
+                        <h4>This is the 5 one on my Gallery</h4>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+              <div class="box">
+                <a href="#" data-toggle="modal" data-target="#9">
+                  <img src="images/gallery_06.jpg" alt="" />
+                </a>
+                <div class="modal fade" id="9" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <div class="modal-body">
+                        <img src="images/gallery_06.jpg" alt="" />
+                      </div>
+                      <!-- <div class="col-md-12 description">
+                        <h4>This is the 6 one on my Gallery</h4>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+              <div class="box">
+                <a href="#" data-toggle="modal" data-target="#10">
+                  <img src="images/gallery_07.jpg" alt="" />
+                </a>
+                <div class="modal fade" id="10" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <div class="modal-body">
+                        <img src="images/gallery_07.jpg" alt="" />
+                      </div>
+                      <!-- <div class="col-md-12 description">
+                        <h4>This is the 7 one on my Gallery</h4>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+              <div class="box">
+                <a href="#" data-toggle="modal" data-target="#11">
+                  <img src="images/gallery_08.jpg" alt="" />
+                </a>
+                <div class="modal fade" id="11" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <div class="modal-body">
+                        <img src="images/gallery_08.jpg" alt="" />
+                      </div>
+                      <!-- <div class="col-md-12 description">
+                        <h4>This is the 8 one on my Gallery</h4>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+              <div class="box">
+                <a href="#" data-toggle="modal" data-target="#12">
+                  <img src="images/gallery_09.jpg" alt="" />
+                </a>
+                <div class="modal fade" id="12" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <div class="modal-body">
+                        <img src="images/gallery_09.jpg" alt="" />
+                      </div>
+                      <!-- <div class="col-md-12 description">
+                        <h4>This is the 9 one on my Gallery</h4>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+              <div class="box">
+                <a href="#" data-toggle="modal" data-target="#13">
+                  <img src="images/gallery_10.jpg" alt="" />
+                </a>
+                <div class="modal fade" id="13" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                      <div class="modal-body">
+                        <img src="images/gallery_10.jpg" alt="" />
+                      </div>
+                      <!-- <div class="col-md-12 description">
+                        <h4>This is the 10 one on my Gallery</h4>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end gal-container -->
+        </div>
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end gallery-main -->
+
+  <div id="footer" class="footer-main">
+    <div class="footer-box pad-top-70">
+      <div class="container">
+        <div class="row">
+          <div class="footer-in-main">
+            <!-- <div class="footer-logo">
+              <div class="text-center">
+                <img src="images/logo.png" alt="" />
+                Bell Pepper
+              </div>
+            </div> -->
+            <!-- end col -->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+              <div class="footer-box-b hidden1">
+                <h3>Our Products</h3>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <ul>
+                      <li><a href="https://www.amazon.in/dp/B0B1HWYGTF" target="_blank">Prawns Chutney</a></li>
+                      <li><a href="https://www.amazon.in/dp/B0B1DZG4ZJ" target="_blank">Tuna Pickle</a></li>
+                      <li><a href="https://www.amazon.in/dp/B09MS95XTR" target="_blank">Garlic Pickle</a></li>
+                      <li><a href="https://www.amazon.in/dp/B09MS9J4KZ" target="_blank">Mango Pickle</a></li>
+                      <li><a href="https://www.amazon.in/dp/B09MQG9SH3" target="_blank">Lemon Pickle</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6">
+                    <ul>
+                      <li><a href="https://www.amazon.in/dp/B0B1DMDRZP" target="_blank">Coconut Oil</a></li>
+                      <li><a href="https://www.amazon.in/dp/B0B1N9BM5X" target="_blank">Malabar Tamarind</a></li>
+                      <li><a href="https://www.amazon.in/dp/B0B1F5YV2Z" target="_blank">Banana Chips</a></li>
+                      <li><a href="https://www.amazon.in/dp/B09T8WJ63S" target="_blank">Dry Prawns</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- end footer-box-b -->
+            </div>
+            <!-- end col -->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+              <div class="footer-box-c">
+                <h3>Contact Us</h3>
+                <p>
+                  <i class="fa fa-map-signs" aria-hidden="true"></i>
+                  <span>Kandalloor South, Kayamkulam, Alappuzha, Kerala</span>
+                </p>
+                <p>
+                  <i class="fa fa-mobile" aria-hidden="true"></i>
+                  <span> +91 85908 41144 </span>
+                </p>
+                <p>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span><a href="#">info.bellpepper@gmail.com</a></span>
+                </p>
+                <ul class="socials-box footer-socials pull-left">
+                  <li>
+                    <a href="http://facebook.com/bellpepper.store" target="_blank">
+                      <div class="social-circle-border">
+                        <i class="fa fa-facebook"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://instagram.com/bellpepper.store" target="_blank">
+                      <div class="social-circle-border">
+                        <i class="fa fa-instagram"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://wa.me/918590841144" target="_blank">
+                      <div class="social-circle-border">
+                        <i class="fa fa-whatsapp"></i>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- end footer-box-c -->
+            </div>
+            <!-- end col -->
+          </div>
+          <!-- end footer-in-main -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+      <div id="copyright" class="copyright-main">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h6 class="copy-title">
+                Copyright &copy; <span id="copy-year"></span> Bell Pepper
+              </h6>
+            </div>
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end container -->
+      </div>
+      <!-- end copyright-main -->
+    </div>
+    <!-- end footer-box -->
+  </div>
+  <!-- end footer-main -->
+
+  <a href="#" class="scrollup" style="display: none">Scroll</a>
+
+  <section id="color-panel" class="close-color-panel">
+    <a class="panel-button gray2"><i class="fa fa-cog fa-spin fa-2x"></i></a>
+    <!-- Colors -->
+    <div class="segment">
+      <h4 class="gray2 normal no-padding">Color Scheme</h4>
+      <a title="orange" class="switcher orange-bg"></a>
+      <a title="strong-blue" class="switcher strong-blue-bg"></a>
+      <a title="moderate-green" class="switcher moderate-green-bg"></a>
+      <a title="vivid-yellow" class="switcher vivid-yellow-bg"></a>
+    </div>
+  </section>
+
+  <!-- ALL JS FILES -->
+  <script type="text/javascript">
+    document.getElementById('copy-year').innerHTML = new Date().getFullYear();
+  </script>
+  <script src="js/all.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- ALL PLUGINS -->
+  <script src="js/custom.js"></script>
 </body>
 
 </html>
